@@ -18,7 +18,7 @@ function Hero(game, x, y) {
     this.body.collideWorldBounds = true;
     // animations
     this.animations.add('stop', [0]);
-    this.animations.add('run', [1, 2, 3], 8, true); // 8fps looped
+    this.animations.add('run', [1, 2, 3, 4, 5, 6, 7, 9, 10, 11], 8, true); // 8fps looped
     this.animations.add('jump', [3]);
     this.animations.add('fall', [4]);
     this.animations.add('die', [5, 6, 5, 6, 5, 6, 5, 6], 12); // 12fps no loop
