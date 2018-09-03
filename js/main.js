@@ -178,7 +178,7 @@ LoadingState.preload = function () {
 
     this.game.load.image('font:numbers', 'images/numbers.png');
 
-    this.game.load.image('icon:coin', 'images/coin_icon.png');
+    this.game.load.image('icon:coin', 'images/coin_icon.gif');
     this.game.load.image('background', 'images/background.png');
     this.game.load.image('invisible-wall', 'images/invisible_wall.png');
     this.game.load.image('ground', 'images/ground.png');
@@ -193,7 +193,8 @@ LoadingState.preload = function () {
 
     this.game.load.spritesheet('hero', 'images/unicorn.png', 115, 79, 12);
 
-    this.game.load.spritesheet('coin', 'images/coin_animated.png', 22, 22);
+    this.game.load.spritesheet('coin', 'images/poop.png', 38, 37);
+
     this.game.load.spritesheet('spider', 'images/spider.png', 42, 32);
     this.game.load.spritesheet('door', 'images/door.png', 42, 66);
     this.game.load.spritesheet('icon:key', 'images/key_icon.png', 34, 30);
@@ -442,7 +443,7 @@ PlayState._spawnCoin = function (coin) {
     sprite.body.allowGravity = false;
 
     // animations
-    sprite.animations.add('rotate', [0, 1, 2, 1], 6, true); // 6fps, looped
+    sprite.animations.add('rotate', [0, 1, 2, 3, 4, 6, 7], 6, true); // 6fps, looped
     sprite.animations.play('rotate');
 };
 
