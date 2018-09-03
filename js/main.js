@@ -39,10 +39,10 @@ Hero.prototype.move = function (direction) {
 
     // update image flipping & animations
     if (this.body.velocity.x < 0) {
-        this.scale.x = -1;
+        this.scale.x = 1;
     }
     else if (this.body.velocity.x > 0) {
-        this.scale.x = 1;
+        this.scale.x = -1;
     }
 };
 
@@ -191,8 +191,8 @@ LoadingState.preload = function () {
 
     this.game.load.spritesheet('decoration', 'images/decor.png', 42, 42);
 
-    this.game.load.spritesheet('hero', 'images/hero.png', 36, 42);
-    //this.game.load.spritesheet('hero', 'images/unicorn.png', 229, 158, 12);
+    this.game.load.spritesheet('hero', 'images/unicorn.png', 115, 79, 12);
+
     this.game.load.spritesheet('coin', 'images/coin_animated.png', 22, 22);
     this.game.load.spritesheet('spider', 'images/spider.png', 42, 32);
     this.game.load.spritesheet('door', 'images/door.png', 42, 66);
@@ -242,6 +242,7 @@ PlayState.create = function () {
         stomp: this.game.add.audio('sfx:stomp'),
         door: this.game.add.audio('sfx:door')
     };
+    
     this.bgm = this.game.add.audio('bgm');
     this.bgm.loopFull();
 
